@@ -1,0 +1,10 @@
+Prompt engineering is the structured design of instructions given to AI systems.
+Clear prompts define the role, task, context, constraints, and output format.
+For example, the AI can be instructed to act as a refinery operations analyst summarizing daily KPI deviations.
+Proper prompting improves accuracy and reduces ambiguity in regulated environments.
+
+"Role: Act as a Senior Refinery Operations Analyst.
+Task: Summarize the daily KPI deviations based on the attached sensor log.
+Context: We are preparing for a morning shift-handover meeting. Focus specifically on any fluctuations in pressure or temperature that exceeded the 5% safety threshold in the distillation unit.
+Constraints: Maintain a neutral, technical tone. Ensure all data points comply with OSHA reporting standards. Do not speculate on root causes unless supported by the log data.
+Output Format: Provide a bulleted list of deviations followed by a 2-sentence 'Action Required' summary."
