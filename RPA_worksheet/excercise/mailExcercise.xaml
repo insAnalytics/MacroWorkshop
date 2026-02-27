@@ -1,0 +1,105 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="mailExcercise" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="mailExcercise_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="mailExcercise" sap:VirtualizedContainerService.HintSize="885.2,2022.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Assign&quot; activity here&#xA;&#xA;Set &quot;To variable&quot; = todayDate&#xA;todayDate is a &quot;String&quot; variable we will create now to save current Date&#xA;&#xA;Set &quot;value&quot; = Now.ToString(&quot;yyyy-MM-dd&quot;)&#xA;Lets break this down:&#xA;&quot;Now&quot; is a VBA command to get the current date and time in the form &quot;dd/MM/yyyy hh/mm/ss:ssss&quot;. &#xA;&#xA;ToString converts variables like date, number to &quot;String&quot; format.&#xA;&#xA;Strings are what computers use to save words and manipulate them.&#xA;the double quotes, &quot;{text}&quot;, is what let a computer knows that {text} is a string." DisplayName="Get Today's Date " sap:VirtualizedContainerService.HintSize="449.6,378.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Assign&quot; activity here&#xA;&#xA;Set &quot;To variable&quot; = filePath&#xA;filePath is a &quot;String&quot; variable to save the path of the folder in which invoices are saved&#xA;&#xA;Set &quot;value&quot; = The real file path&#xA;Right click the folder containing the invoices and click on &quot;copy as path&quot;. Then paste it." DisplayName="Save FilePath" sap:VirtualizedContainerService.HintSize="449.6,280.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop &quot;Assign&quot; activity here&#xA;&#xA;Set &quot;To variable&quot; = fileName&#xA;fileName is a &quot;String&quot; variable containing the name prefix of the files we are working with.&#xA;&#xA;Set &quot;Value&quot; = the file name prefix&#xA;In our case, the files are named in this format &quot;{fileName}_{todayDate}.pdf&quot;. We use the part left of the &quot;_&quot; here." DisplayName="Save FileName" sap:VirtualizedContainerService.HintSize="449.6,280.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop &quot;Assign&quot; activity here&#xA;&#xA;Set &quot;To variable&quot; = dynamicPath&#xA;fullPath is a &quot;String&quot; variable containing the true path of the invoice. It is dynamic as it accounts for today's date using &quot;todayDate&quot; letting us choose the latest invoice.&#xA;&#xA;Set &quot;Value&quot; = filePath + &quot;\&quot; + fileName + &quot;_&quot; + todayDate + &quot;.pdf&quot;&#xA;Lets try to understand this equation. When we add strings in VBA, it combines the words to create a new word or sentence.&#xA;For example, &quot;un&quot; + &quot;install&quot; = &quot;uninstall&quot;&#xA; In our case, we are combing filePath + fileName + todayDate to get the full file name.&#xA;For example, &quot;D:\UIPath\rpa-project\mailPractice\Invoices&quot; + &quot;\&quot; + &quot;Invoice&quot; + &quot;_&quot; + &quot;2026-02-27&quot; + &quot;.pdf&quot; gives us the full file &#xA;&quot;D:\UIPath\rpa-project\mailPractice\Invoices\Invoice_2026-02-26.pdf&quot;&#xA;&#xA;This lets us choose the Invoice for the latest date, making the process dynamic." DisplayName="Finally Construct Dynamic True File Path" sap:VirtualizedContainerService.HintSize="449.6,444" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop the &quot;Send Email&quot; activity under Microsoft365 -&gt; Outlook &#xA;&#xA;First, click on the setting symbol on the right of the account option. &#xA;A drop down box will show up. Click on add connection and follow the steps to link your outlook account with UIPath&#xA;&#xA;Next, set the &quot;To&quot; option = insarpademo@gmail.com&#xA;This is the email address of the recipient. In this case set it to an email address we have set specifically for this course.&#xA; &#xA;Additionally, note that we are not putting quotes &quot;&quot; around our string this time. This is due to the fact that UIPath is only expecting string input here. Hence, adding &quot;&quot; like &quot;insarpademo@gmail.com&quot; will make the email incorrect. The same is true for the body of our email.&#xA;&#xA;Set &quot;subject&quot; option as  &quot;Daily Invoice &quot; + todayDate&#xA;We once again use todayDate to make our email titles dynamic and change with date. &#xA;&#xA;Additionally, not that we add a space &quot; &quot; ahead of Invoice. If we do not do that, VBA will squish the two strings together, resulting in &quot;Daily Invoice2026-02-26&quot; as title.&#xA;&#xA;Finally, we set our attachment path as {LocalResource.FromPath(dynamicPath)}.&#xA;Here, LocalResource.FromPath(dynamicPath) converts our local file path (dynamicPath) into a LocalResource object that the Microsoft365 Send Email activity can understand and process as an attachment.&#xA;&#xA;{} tells VBA that it is a string" DisplayName="Finally, Lets send the email" sap:VirtualizedContainerService.HintSize="449.6,615.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+  </Sequence>
+</Activity>

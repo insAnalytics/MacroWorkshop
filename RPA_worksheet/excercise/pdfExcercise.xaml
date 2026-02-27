@@ -1,0 +1,325 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="pdfExcercise" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="pdfExcercise_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="pdfExcercise" sap:VirtualizedContainerService.HintSize="885.2,5315.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="todayDate" />
+      <Variable x:TypeArguments="x:String" Name="filePath" />
+      <Variable x:TypeArguments="x:String" Name="folderPath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Stuff we have covered before" sap:VirtualizedContainerService.HintSize="617.6,606.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Get Today's Date" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[todayDate]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Now.ToString("yyyy-MM-dd")]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <Assign DisplayName="Get path of Invoice storage folder" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[folderPath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["D:\UIPath\RPA_worksheet\recievedInvoices"]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <Assign DisplayName="Create path of file of Todays Folder" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[filePath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[folderPath + "\" + todayDate]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop a &quot;Build Data Table&quot; activity here&#xD;&#xA;&#xD;&#xA;We click the Datatable and configure our datatable. &#xD;&#xA;First delete the default row.&#xD;&#xA;Then set the columns with the field names and the appropriate type.&#xD;&#xA;For us, it is:&#xD;&#xA;&#xD;&#xA;&quot;Vendor&quot; as type &quot;String&quot;&#xD;&#xA;&quot;Quantity&quot; as type &quot;Int32&quot;&#xD;&#xA;&quot;Amount&quot; as type &quot;String&quot;&#xD;&#xA;&#xD;&#xA;on the right side, in your properties panel set data table as dt_output" DisplayName="create data table" sap:VirtualizedContainerService.HintSize="617.6,329.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Drag and drop a &quot;For Each file in folder&quot; activity here&#xD;&#xA;&#xD;&#xA;Set &quot;In Folder&quot; as filePath.&#xD;&#xA;This will tell the computer the folder which we want to use.&#xD;&#xA;It will then operate on each file in the folder&#xD;&#xA;Every file accessed is available as CurrentFile" DisplayName="Read pdf one by one" sap:VirtualizedContainerService.HintSize="617.6,2256.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEachFileX Folder="{x:Null}" DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="516.8,2054.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1768" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap2010:Annotation.AnnotationText="Drag and drop a &quot;Read Pdf Text&quot; Activity here&#xD;&#xA;&#xD;&#xA;set &quot;File (local path)&quot; = CurrentFile.FullName&#xD;&#xA;CurrentFile is the current file we are operating on and want to open&#xD;&#xA;FullName gives us the path of the file in our system&#xD;&#xA;&#xD;&#xA;On the properties panel, set &quot;Text&quot; as pdfText&#xD;&#xA;This stores the read text for further use" DisplayName="Read pdf" sap:VirtualizedContainerService.HintSize="449.6,264" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Assign&quot; activity here&#xD;&#xA;&#xD;&#xA;set &quot;To variable&quot; as vendorName&#xD;&#xA;&#xD;&#xA;set &quot;value&quot; using the answer sheet or copy this:&#xD;&#xA;pdfText.Trim().Split({vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)(0).Replace(&quot;TAX INVOICE&quot;, &quot;&quot;).Trim() &#xD;&#xA;&#xD;&#xA;I will explain this" DisplayName="Split text and extract Vendor Name" sap:VirtualizedContainerService.HintSize="449.6,296.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Assign&quot; activity here&#xD;&#xA;&#xD;&#xA;set &quot;To variable&quot; as itemQty&#xD;&#xA;&#xD;&#xA;set &quot;value&quot; using the answer sheet or copy this:&#xD;&#xA;pdfText.Split({&quot;Subtotal&quot;}, StringSplitOptions.None)(0).Trim().Split({vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries).Last().Trim()&#xD;&#xA;&#xD;&#xA;I will explain this" DisplayName="Split text and extract Line" sap:VirtualizedContainerService.HintSize="449.6,280.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Assign&quot; activity here&#xD;&#xA;&#xD;&#xA;set &quot;To variable&quot; as itemQty&#xD;&#xA;&#xD;&#xA;set &quot;value&quot; using the answer sheet or copy this:&#xD;&#xA;itemQty.Split({&quot;Rs.&quot;}, StringSplitOptions.None)(0).Trim().Split({&quot; &quot;}, StringSplitOptions.RemoveEmptyEntries).Last()&#xD;&#xA;&#xD;&#xA;I will explain this" DisplayName="Split line and extract itemQty" sap:VirtualizedContainerService.HintSize="449.6,280.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Assign&quot; activity here&#xD;&#xA;&#xD;&#xA;set &quot;To variable&quot; as totalAmount&#xD;&#xA;&#xD;&#xA;set &quot;value&quot; using the answer sheet or copy this:&#xD;&#xA;pdfText.Split({&quot;TOTAL DUE&quot;}, StringSplitOptions.None)(1).Trim().Split({vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)(0).Trim()&#xD;&#xA;&#xD;&#xA;I will explain this" DisplayName="Split line and extract total amount" sap:VirtualizedContainerService.HintSize="449.6,280.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+              <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;add data row&quot; activity here&#xD;&#xA;&#xD;&#xA;set &quot;array row&quot; as {vendorName, itemQty, totalAmount}&#xD;&#xA;{} is a list in VBA. Think of it as an excel row containing vendor name, quantity and amount.&#xD;&#xA;&#xD;&#xA;In fact, this will be fed into excel as a row in the next step.&#xD;&#xA;&#xD;&#xA;set &quot;datatable&quot; as dt_output&#xD;&#xA;This is the table we construcuted before. We are telling the computer to add the excel row here." DisplayName="Add data row to our data table" sap:VirtualizedContainerService.HintSize="449.6,304.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+      </ui:ForEachFileX>
+    </Sequence>
+    <Sequence DisplayName="Stuff we have covered before" sap:VirtualizedContainerService.HintSize="617.6,432" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="save folder path containing excel" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[folderPath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["D:\UIPath\RPA_worksheet\invoiceExcel"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="create excel path" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[filePath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[folderPath + "\" + todayDate + ".xlsx"]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="617.6,1667.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="584,1557.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap2010:Annotation.AnnotationText="Drag and drop an &quot;Use Excel File&quot; activity here&#xD;&#xA;&#xD;&#xA;set &quot;Excel file&quot; = filePath&#xD;&#xA;This is the path of the excel file we want to work with&#xD;&#xA;&#xD;&#xA;" DisplayName="Define excel file we want to work with" sap:VirtualizedContainerService.HintSize="550.4,1497.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" WorkbookPath="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="516.8,1304" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1011.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence sap2010:Annotation.AnnotationText="Drag and drop the &quot;Write Cell&quot; activity here.&#xD;&#xA;&#xD;&#xA;Set &quot;What to write&quot; as &quot;Vendor Name&quot;&#xD;&#xA;This is the name of the header we want to set&#xD;&#xA;&#xD;&#xA;Indicate in excel &quot;where to write&quot;" DisplayName="Write Vendor Header" sap:VirtualizedContainerService.HintSize="449.6,232" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                      <Sequence sap2010:Annotation.AnnotationText="Drag and drop the &quot;Write Cell&quot; activity here.&#xA;&#xA;Set &quot;What to write&quot; as &quot;Quantity&quot;&#xA;This is the name of the header we want to set&#xA;&#xA;Indicate in excel &quot;where to write&quot;" DisplayName="Write Quantity Header" sap:VirtualizedContainerService.HintSize="449.6,232" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                      <Sequence sap2010:Annotation.AnnotationText="Drag and drop the &quot;Write Cell&quot; activity here.&#xA;&#xA;Set &quot;What to write&quot; as &quot;Amount&quot;&#xA;This is the name of the header we want to set&#xA;&#xA;Indicate in excel &quot;where to write&quot;" DisplayName="Write Quantity Header" sap:VirtualizedContainerService.HintSize="449.6,232" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                      <Sequence sap2010:Annotation.AnnotationText="Drag and drop the &quot;Write Data Table to Excel&quot; activity here&#xD;&#xA;&#xD;&#xA;Set &quot;What to write&quot; as dt_output&#xD;&#xA;This will write the data table to the excel sheet&#xD;&#xA;&#xD;&#xA;Indicate in excel &quot;where to write&quot;&#xD;&#xA;&#xD;&#xA;Choose to exclude headers as we already created headers." DisplayName="Add our data table to excel" sap:VirtualizedContainerService.HintSize="449.6,255.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
